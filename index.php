@@ -1,23 +1,13 @@
-<HTML>
-	<HEAD>
-		<link rel="stylesheet" href="style.css">
-		<TITLE>Camagru!</TITLE>
-	</HEAD>
-	<BODY>
-		<HEADER>
-			<NAV>
-				<DIV class="main-nav">
-					<A href="index.php">Home</A>
-					<DIV class="nav-login">
-						<FORM>
-							<input type="text" name="uid" placeholder="E-mail">
-							<input type="password" name="pwd" placeholder="Password">
-							<button type="submit" name="submit">Login</button>
-							<A href="signup.php">Sign Up</A>
-						</FORM>
-					</DIV>
-				</DIV>
-			</NAV>
-		</HEADER>
+<?php
+	include_once 'header.php';
+?>
+		<SECTION class="main-container">
+			<DIV class="main-wrapper">
+				<H2>Home</H2>
+			</DIV>
+		</SECTION>
 	</BODY>
 </HTML>
+<?php
+	include_once 'footer.php';
+?>
