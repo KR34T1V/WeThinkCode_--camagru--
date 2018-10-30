@@ -3,15 +3,19 @@
 	background-color: darkslategrey;
 	height: 90px;
 }
+
 .main-nav a{
 	text-decoration: none;
 }
+
 body{
 	background-color: antiquewhite;
 }
+
 header nav{
 	width:100%;
 }
+
 header nav a{
 	font-family: 'Courier New', Courier, monospace;
 	color: white;
@@ -19,10 +23,12 @@ header nav a{
 	font-size: 16px;
 	padding-left: 20px;
 }
+
 .nav-login{
 	padding-top: 30px;
 	float: right;
 }
+
 .nav-login form input{
 	float: left;
 	width: 160px;
@@ -33,6 +39,7 @@ header nav a{
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 16px;
 }
+
 .nav-login form button{
 	float: left;
 	width: 70px;
@@ -45,10 +52,12 @@ header nav a{
 	color:grey;
 	cursor: pointer;
 }
+
 .nav-login form button:hover{
 	background-color: grey;
 	color: white;
 }
+
 header .nav-login a{
 	float: right;
 	display: block;
@@ -61,12 +70,50 @@ header .nav-login a{
 	margin-right: 10px;
 	text-decoration-line: underline;
 }
+
 .main-container{
 	padding-top: 20px;
 }
+
 .main-container h2{
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 40px;
 	line-height: 50px;
 	text-align: center;
+}
+
+/* SIGNUP.PHP */
+
+.signup-form {
+	width: 400px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+.signup-form input {
+	width: 90%;
+	height: 40px;
+	padding: 0px 5%;
+	border: none;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+	line-height: 40px;
+	margin-bottom: 4px;
+}
+
+.signup-form button{
+	display: block;
+	margin: 0 auto;
+	width: 30%;
+	height: 40px;
+	border: none;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+	color: white;
+	background-color:slategrey;
+	cursor: pointer;
+}
+.signup-form button:hover{
+	color: grey;
+	background-color:white;
 }

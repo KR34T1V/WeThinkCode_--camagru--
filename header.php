@@ -13,7 +13,7 @@
 							<input type="text" name="uid" placeholder="E-mail">
 							<input type="password" name="pwd" placeholder="Password">
 							<button type="submit" name="submit">Login</button>
-							<A href="signup.php">Sign Up</A>
+							<A href="signup.php">Sign up</A>
 						</FORM>
 					</DIV>
 				</DIV>
