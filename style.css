@@ -42,7 +42,7 @@ header nav a{
 
 .nav-login form button{
 	float: left;
-	width: 80px;
+	width: auto;
 	height: 30px;
 	padding: 0px 10px;
 	margin-right: 10px;
@@ -116,4 +116,38 @@ header .nav-login a{
 .signup-form button:hover{
 	color: grey;
 	background-color:white;
+}
+/*Account*/
+.main-wrapper form input {
+	width: 90%;
+	height: 40px;
+	padding: 0px 5%;
+	border: none;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+	line-height: 40px;
+	margin-bottom: 4px;
+}
+
+.main-wrapper form button{
+	display: block;
+	margin: 0 auto;
+	width: 30%;
+	height: 40px;
+	border: none;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+	color: white;
+	background-color:slategrey;
+	cursor: pointer;
+}
+.main-wrapper form button:hover{
+	color: grey;
+	background-color:white;
+}
+/*FOOTER*/
+.foot-copyright p{
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+	text-align: right;
 }

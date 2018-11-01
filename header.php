@@ -17,6 +17,7 @@
 						if (isset($_SESSION['user_id'])){
 							echo '<FORM action="includes/logout.inc.php" method="POST">
 							<BUTTON type="submit" name="submit">Logout</BUTTON>
+							<A href="account.php">Account</A>
 							</FORM>';
 						}
 						else {
