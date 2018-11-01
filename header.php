@@ -1,3 +1,7 @@
+<?PHP
+	session_start();
+?>
+
 <HTML>
 	<HEAD>
 		<link rel="stylesheet" href="style.css">
@@ -9,12 +13,21 @@
 				<DIV class="main-nav">
 					<A href="index.php">Home</A>
 					<DIV class="nav-login">
-						<FORM>
-							<input type="text" name="uid" placeholder="E-mail">
-							<input type="password" name="pwd" placeholder="Password">
+					<?PHP
+						if (isset($_SESSION['user_id'])){
+							echo '<FORM action="includes/logout.inc.php" method="POST">
+							<BUTTON type="submit" name="submit">Logout</BUTTON>
+							</FORM>';
+						}
+						else {
+							echo '<FORM action="includes/login.inc.php" method="POST">
+							<input type="text" name="uid" placeholder="E-mail" required>
+							<input type="password" name="pwd" placeholder="Password" required>
 							<button type="submit" name="submit" value="submit">Login</button>
 							<A href="signup.php">Sign up</A>
-						</FORM>
+							</FORM>';
+						}
+					?>
 					</DIV>
 				</DIV>
 			</NAV>
