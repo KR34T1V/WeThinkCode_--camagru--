@@ -32,17 +32,17 @@ if (isset($submit)) {
 			exit();
 			}
 			else{
-	//Check Uid
 				$query = "SELECT * FROM users WHERE user_email=?";
 				$stmt = $pdo->prepare($query);
 				$stmt->execute([$email]);
 				$result = $stmt->fetch();
-
+				
 				if ($result){
-				header("Location: ../signup.php?signup=used_email");
-				exit();
+					header("Location: ../signup.php?signup=used_email");
+					exit();
 				}
 				else {
+//Check Uid
 					$query = "SELECT * FROM users WHERE user_uid=?";
 					$stmt = $pdo->prepare($query);
 					$stmt->execute([$uid]);

@@ -118,7 +118,30 @@ header .nav-login a{
 	background-color:white;
 }
 /*Account*/
-.main-wrapper form input {
+
+.account-verify button {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	height: 40px;
+	border: none;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+	color: white;
+	background-color:slategrey;
+	cursor: pointer;
+}
+.account-verify button:hover{
+	color: grey;
+	background-color:white;
+}
+.change-pwd {
+	width: 400px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+.change-pwd input {
 	width: 90%;
 	height: 40px;
 	padding: 0px 5%;
@@ -129,10 +152,10 @@ header .nav-login a{
 	margin-bottom: 4px;
 }
 
-.main-wrapper form button{
+.change-pwd button{
 	display: block;
 	margin: 0 auto;
-	width: 30%;
+	width: 50%;
 	height: 40px;
 	border: none;
 	font-family: 'Courier New', Courier, monospace;
@@ -141,7 +164,7 @@ header .nav-login a{
 	background-color:slategrey;
 	cursor: pointer;
 }
-.main-wrapper form button:hover{
+.change-pwd button:hover{
 	color: grey;
 	background-color:white;
 }

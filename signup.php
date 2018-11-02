@@ -3,6 +3,23 @@
 ?>
 		<SECTION class="main-container">
 			<DIV class="main-wrapper">
+			<?PHP
+			$signup = $_GET['signup'];
+				if ($signup == "success")
+					echo "Signup Success. Please Login Above!";
+				else if ($signup == "pwdmismatch") {
+					echo "Signup Error. Passwords do not match!";
+				}
+				else if ($signup == "used_user") {
+					echo "Signup Error. Username exists!";
+				}
+				else if ($signup == "used_email") {
+					echo "Signup Error. E-mail exists!";
+				}
+				else if ($signup == "error_email") {
+					echo "Signup Error. E-mail invalid!";
+				}
+			?>
 				<H2>Signup</H2>
 				<FORM class="signup-form" action="includes/signup.inc.php" method="POST">
 					<INPUT type="text" name="first" placeholder="Firstname" required>
