@@ -10,16 +10,16 @@ include_once 'header.php';
 		?>
 		<h2>Account</h2>
 		<?PHP
-		require_once 'includes/dbh.inc.php';
-		$sql = 'SELECT * WHERE user_id='.$_SESSION['user_id'];
-		$stmt = $pdo->prepare($query);
-		$stmt->bindParam(':username', $uid);
-		$stmt->execute();
+		include_once 'includes/dbh.inc.php';
+		$sql = 'SELECT *FROM users WHERE user_id= ?';
+		$stmt = $pdo->prepare($sql);
+		$stmt->execute([$_SESSION['user_id']]);
 		$result = $stmt->fetch();
-		if ($result['verified'] != 1)
+		if ($result['user_verified'] == 0){
 		echo '<FORM class="account-verify" action="includes/verifymail.inc.php" method="POST">
 			<BUTTON name="verify">Verify Email</BUTTON>
 			</FORM>';
+		}
 		?>
 		<h2>Change Password</h2>
 		<FORM class="change-pwd">

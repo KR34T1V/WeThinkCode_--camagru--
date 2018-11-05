@@ -25,7 +25,7 @@ if (isset($submit)){
 			header("Location: ../index.php?login=unknown_user");
 			exit();
 		}
-		else if (!$result ||!$pwd == $result['user_pwd']){
+		else if (!$result ||$pwd != $result['user_pwd']){
 // Check Password
 			header("Location: ../index.php?login=error_credentials");
 			exit();
@@ -37,6 +37,7 @@ if (isset($submit)){
 			$_SESSION['user_last'] = $result['user_last'];
 			$_SESSION['user_uid'] = $result['user_uid'];
 			$_SESSION['user_email'] = $result['user_email'];
+			$_SESSION['user_verified'] = $result['user_verified'];
 			header("Location: ../index.php?login=success");
 			exit();
 		}
