@@ -1,5 +1,7 @@
 <?PHP
+/*********************HEADER********************/
 session_start();
+
 if (!$_SESSION['user_id']){
 	header("Location: index.php");
 	exit;
@@ -7,13 +9,12 @@ if (!$_SESSION['user_id']){
 ?>
 <HTML>
 	<HEAD>
-		<link rel="css/header.css" href="css/header.css">
+		<link rel="stylesheet" href="stylesheet.css">
 		<TITLE>Camagru!</TITLE>
 	</HEAD>
 	<BODY>
-		<HEADER>
-			<NAV class=nav-header>
-				<DIV>
+		<NAV class=nav-header>
+			<DIV class=header-content>
 					<A href="index.php">Home</A>
 					<?PHP
 					if (!$_SESSION['user_id']){
@@ -40,6 +41,10 @@ if (!$_SESSION['user_id']){
 			</NAV>
 		</HEADER>
 		<?PHP
+/*********************END********************/
+
+/*********************BODY********************/
+
 			$status	= $_GET['verify'];
 			if ($status == "email_sent") {
 				echo '
@@ -60,3 +65,9 @@ if (!$_SESSION['user_id']){
 			<INPUT type="password" name="pwd" placeholder="Current Password">
 			<BUTTON type="submit" name="submit" value="OK">Change E-Mail</BUTTON>
 		</FORM>
+<?PHP
+/*********************END********************/
+
+/*********************FOOTER********************/
+include_once "footer.php";
+/*********************END********************/

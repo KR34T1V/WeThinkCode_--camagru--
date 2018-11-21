@@ -1,10 +1,16 @@
 <?PHP
+/*********************HEADER********************/
 session_start();
+include_once "header.php";
+
 if (!$_SESSION['user_id']){
 	header("Location: index.php");
 	exit;
 }
-include_once "header.php";
+/*********************END********************/
+
+/*********************BODY********************/
+
 ?>
 <DIV>
 	<h2>Account</h2>
@@ -45,8 +51,24 @@ include_once "header.php";
 	</FORM>
 </DIV>
 	<h3>Notifications</h3>
-	<INPUT type="checkbox" checked>
+	<?PHP
+	if ($_SESSION['user_notify'] == 0){
+		echo '<FORM action="back/acc.notify.back.php" method="POST">
+			<BUTTON name="notify" value="1">Notify: OFF</BUTTON>
+			</FORM>';
+	}
+	else {
+		echo '<FORM action="back/acc.notify.back.php" method="POST">
+			<BUTTON name="img" value="0">Notify: ON</BUTTON>
+			</FORM>';
+	}
+	?>
 <DIV>
 <?PHP
+/*********************END********************/
+
+/*********************FOOTER********************/
 include_once "footer.php";
+/*********************END********************/
+
 ?>

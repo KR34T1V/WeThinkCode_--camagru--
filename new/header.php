@@ -3,13 +3,13 @@ session_start();
 ?>
 <HTML>
 	<HEAD>
-		<link rel="css/header.css" href="css/header.css">
+		<link rel="stylesheet" href="stylesheet.css">
 		<TITLE>Camagru!</TITLE>
 	</HEAD>
 	<BODY>
 		<HEADER>
 			<NAV class=nav-header>
-				<DIV>
+				<DIV class=header-content>
 					<A href="index.php">Home</A>
 					<?PHP
 					if (!$_SESSION['user_id']){
@@ -19,8 +19,8 @@ session_start();
 						<INPUT type="text" name="login" placeholder="E-Mail/Username" required>
 						<INPUT type="password" name="pwd" placeholder="Password" required>
 						<BUTTON type="submit" name="submit" value="OK">Login</BUTTON>
-						<A href="forgot.pwd.php">Forgot Password<A>
-						<A href="signup.php">Sign Up<A>
+						<A href="forgot.pwd.php">Forgot Password</A>
+						<A href="signup.php">Sign Up</A>
 						</FORM>
 						</DIV>';
 					}
@@ -29,7 +29,7 @@ session_start();
 					}
 					else{
 						echo '
-						<A href="upload.php">Upload</A>
+						<A href="camera.php">Upload/Camera</A>
 						<DIV class="nav-login">
 							<FORM action="back/logout.back.php" method="POST">
 								<BUTTON type="submit" name="submit" value="OK">Logout</BUTTON>

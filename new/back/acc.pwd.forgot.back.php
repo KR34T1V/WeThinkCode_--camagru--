@@ -46,7 +46,7 @@ if ($submit == "OK"){
 			$mail_header_mailer	= 'X-Mailer: PHP/' . PHP_VERSION;
 			$mail_header_from	= 'From: <noreply@camagru.cterblan>'."\r\n";
 			$mail_header_reply	= 'Reply-To: <support@camagru.cterblan>' ."\r\n";
-			$mail_header		= $mail_header_cont .','. $mail_header_mailer .','. $mail_header_from .','. $mail_header_reply;
+			$mail_header		= $mail_header_from . $mail_header_reply . $mail_header_mailer . $mail_header_cont;
 			$mail_to 			= $mail_email;
 			$mail_subject		= "Camagru! | Account Verification";
 			$mail_message		='<HTML>

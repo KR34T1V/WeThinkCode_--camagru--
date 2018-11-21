@@ -15,6 +15,15 @@ $submit			= $_POST['submit'];
 $user_pwd_hashed = password_hash($user_pwd, PASSWORD_DEFAULT);
 $mail_key_hashed = password_hash($user_email, PASSWORD_DEFAULT);
 
+// $to = 'bob@example.com';
+
+// $subject = 'Website Change Request';
+
+// $headers = "From: " . strip_tags($_POST['req-email']) . "\r\n";
+// $headers .= "Reply-To: ". strip_tags($_POST['req-email']) . "\r\n";
+// $headers .= "CC: susan@example.com\r\n";
+// $headers .= "MIME-Version: 1.0\r\n";
+// $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 //MAIL VARIABLES
 $mail_path			= $_SERVER['HTTP_HOST'];
 $mail_path			.= $_SERVER['REQUEST_URI'];
@@ -23,7 +32,8 @@ $mail_header_cont	= "Content-type:text/html;charset=UTF-8" . "\r\n";
 $mail_header_mailer	= 'X-Mailer: PHP/' . PHP_VERSION;
 $mail_header_from	= 'From: <noreply@camagru.cterblan>'."\r\n";
 $mail_header_reply	= 'Reply-To: <support@camagru.cterblan>' ."\r\n";
-$mail_header		= $mail_header_cont .','. $mail_header_mailer .','. $mail_header_from .','. $mail_header_reply;
+$mail_header		= $mail_header_from . $mail_header_reply . $mail_header_mailer . $mail_header_cont;
+
 $mail_to 			= $user_email;
 $mail_subject		= "Camagru! | Account Verification";
 $mail_message		='<HTML>
