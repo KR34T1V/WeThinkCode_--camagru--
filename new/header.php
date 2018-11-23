@@ -4,6 +4,7 @@ session_start();
 <HTML>
 	<HEAD>
 		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
 		<TITLE>Camagru!</TITLE>
 	</HEAD>
 	<BODY>
@@ -39,5 +40,8 @@ session_start();
 					}
 					?>
 				</DIV>
+				<DIV class=clear>
+				</DIV>
 			</NAV>
 		</HEADER>
+		<DIV class="content-wrapper">

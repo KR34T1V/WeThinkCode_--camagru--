@@ -3,12 +3,12 @@
 //CONNECT WITH SERVER
 include_once "connect.back.php";
 //MAIN VARIABLES
-$user_first		= $_POST['first'];
-$user_last		= $_POST['last'];
-$user_uid		= $_POST['uid'];
-$user_email		= $_POST['email'];
-$user_pwd		= $_POST['pwd'];
-$user_repwd		= $_POST['repwd'];
+$user_first		= htmlentities($_POST['first']);
+$user_last		= htmlentities($_POST['last']);
+$user_uid		= htmlentities($_POST['uid']);
+$user_email		= htmlentities($_POST['email']);
+$user_pwd		= htmlentities($_POST['pwd']);
+$user_repwd		= htmlentities($_POST['repwd']);
 $user_notify	= 1;
 $submit			= $_POST['submit'];
 //HASHED VARIABLES

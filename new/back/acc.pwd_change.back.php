@@ -3,9 +3,9 @@ session_start();
 include_once "connect.back.php";
 //VARIABLES
 $id			= $_SESSION['user_id'];
-$oldpwd		= $_POST['oldpwd'];
-$newpwd		= $_POST['newpwd'];
-$repwd		= $_POST['repwd'];
+$oldpwd		= htmlentities($_POST['oldpwd']);
+$newpwd		= htmlentities($_POST['newpwd']);
+$repwd		= htmlentities($_POST['repwd']);
 //HASHED VARIABLES
 $newpwd_hashed = password_hash($newpwd, PASSWORD_DEFAULT);
 //CHECK IF EMPTY

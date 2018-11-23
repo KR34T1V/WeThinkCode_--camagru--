@@ -13,11 +13,10 @@ if ($pdo->prepare($query)->execute() === TRUE)
 	echo "images TABLE deleted\n";
 else
 	echo "images TABLE failed\n";
-$files = glob('../uploads/*');
+$files = scandir('../uploads');
 
 foreach($files as $file){
-  if(is_file($file))
-	if (unlink($file) === TRUE)
+	if (unlink("../uploads/".$file))
 		echo $file." in uploads deleted\n";
 	else
 		echo $file." in uploads failed to delete\n";

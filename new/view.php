@@ -6,7 +6,7 @@ include_once "back/connect.back.php";
 
 /*********************BODY********************/
 if (!$_SESSION['user_id']){
-	header("Location: index.php");
+	header("Location: index.php?login=required");
 	exit();
 }
 //VARIABLES
@@ -45,28 +45,33 @@ $stmt = $pdo->prepare($query);
 $stmt->execute([$img]);
 $result = $stmt->fetch();
 if ($view = $result['img_path']){
+	//SHOW IMAGE
+	echo '<DIV class="img center">
+		<img class="center" src="'.$view.'">';
 	//SHOW LIKE BUTTON
 	if ($liked == 1) {
-		echo '<DIV>
-			<img src="'.$view.'">
-			<FORM action="back/like.back.php" method="POST">
+		echo '<FORM action="back/like.back.php" method="POST">
 				<BUTTON name="img" value="'.$img.'">Unlike! '.$likes.'</BUTTON>
 			</FORM>
 			';
 	}
 	//SHOW UNLIKE BUTTON
 	else {
-	echo '<DIV>
-			<img src="'.$view.'">
-			<FORM action="back/like.back.php" method="POST">
+	echo 	'<FORM action="back/like.back.php" method="POST">
 				<BUTTON name="img" value="'.$img.'">Like! '.$likes.'</BUTTON>
 			</FORM>';
 	}
 	echo	'<FORM action="back/comment.back.php" method="POST">
-				<INPUT type="text" name="comment" placeholder="Comment Here">
-				<BUTTON name="img" value="'.$img.'">Leave Comment</BUTTON>
-			</FORM>
-		</DIV>';
+	<INPUT type="text" name="comment" placeholder="Comment Here">
+	<BUTTON name="img" value="'.$img.'">Leave Comment</BUTTON>
+	</FORM>';
+	//SHOW DELETE BUTTON
+	if ($result['img_user_id'] == $user_id){
+		echo '<FORM action="back/del_img.back.php" method="POST">
+				<BUTTON name="img" value="'.$img.'">Delete This Image</BUTTON>
+				</FORM>';
+	}
+	echo '</DIV>';
 	//GET COMMENTS
 	$query = "SELECT *
 				FROM comments
@@ -76,7 +81,6 @@ if ($view = $result['img_path']){
 	$stmt = $pdo->prepare($query);
 	$stmt->execute([$img]);
 	$result = $stmt->fetchAll();
-	//SHOW COMMENTS
 	foreach ($result as $cmt){
 		//COMMNET VARIABLES
 		$cmt_user_id	= $cmt['cmt_user_id'];
@@ -92,7 +96,7 @@ if ($view = $result['img_path']){
 		$cmt_res = $stmt->fetch();
 		//DISPLAY COMMENT
 		$cmt_username = $cmt_res['user_uid'];
-		echo'<DIV>
+		echo'<DIV class="comments">
 				<H4>'.$cmt_username.':</H4>
 				<H4>'.$cmt_date_created.'</H4>
 				<DIV>

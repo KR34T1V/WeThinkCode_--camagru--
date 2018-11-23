@@ -3,10 +3,10 @@
 include_once "connect.back.php";
 
 //VARIABLES
-$email		= $_POST['email'];
-$pwd		= $_POST['pwd'];
-$repwd		= $_POST['repwd'];
-$submit		= $_POST['submit'];
+$email		= htmlentities($_POST['email']);
+$pwd		= htmlentities($_POST['pwd']);
+$repwd		= htmlentities($_POST['repwd']);
+$submit		= htmlentities($_POST['submit']);
 
 
 

@@ -5,7 +5,7 @@ include_once "connect.back.php";
 //VARIABLES
 $id		=$_SESSION['user_id'];
 $submit		=$_POST['submit'];
-$uid		=$_POST['newuid'];
+$uid		=htmlentities($_POST['newuid']);
 //CHECK SUBMIT
 if ($submit == "OK"){
 	$query ='SELECT *

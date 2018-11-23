@@ -3,9 +3,9 @@ include_once "connect.back.php";
 
 
 //VARIABLES
-$user_id		= $_GET['user'];
-$key			= $_GET['key'];
-$pwd			=$_GET['rdm'];
+$user_id		= htmlentities($_GET['user']);
+$key			= htmlentities($_GET['key']);
+$pwd			= htmlentities($_GET['rdm']);
 //CHECK EMPTY
 if (!empty($user_id) && !empty($key)){
 	$query = "SELECT *

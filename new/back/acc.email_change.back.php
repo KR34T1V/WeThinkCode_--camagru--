@@ -3,8 +3,8 @@ session_start();
 include_once "connect.back.php";
 //VARIABLES 
 $id			= $_SESSION['user_id'];
-$email		= $_POST['email'];
-$pwd		= $_POST['pwd'];
+$email		= htmlentities($_POST['email']);
+$pwd		= htmlentities($_POST['pwd']);
 
 //CHECK EMPTY
 if (!empty($email) && !empty($pwd)){

@@ -3,7 +3,7 @@ session_start();
 include_once "connect.back.php";
 //VARIABLES
 $img_id			= $_POST['img'];
-$comment	= $_POST['comment'];
+$comment		= htmlentities($_POST['comment']);
 $user_id		= $_SESSION['user_id'];
 //GET IMAGE DATA
 $query = "SELECT *
@@ -34,8 +34,8 @@ $mail_header		= $mail_header_from . $mail_header_reply . $mail_header_mailer . $
 $mail_to 			= $img_owner_email;
 $mail_subject		= "Camagru! | Comment on Your Post!";
 $mail_message		='<HTML>
-						<p>Dear'.$img_owner_first.' '.$img_owner_last.', </p><br />
-						<p>We are happy to notify you that you have a new comment on one of yout posts!</p><br />
+						<p>Dear '.$img_owner_first.' '.$img_owner_last.', </p><br />
+						<p>We are happy to notify you that you have a new comment on one of your posts!</p><br />
 					</HTML';
 //CHECK IF LOGGED IN
 if (!$_SESSION['user_id'] || !$img_id || empty($comment)){

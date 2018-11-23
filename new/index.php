@@ -31,6 +31,12 @@ else if ($_GET['pwd_reset'] == "success"){
 	<p>Password successfully reset please login</p>
 	';
 }
+//IF LOGIN IS REQUIRED 
+else if ($_GET['login']=="required"){
+	echo '
+	<p>Login Required! Please login above</p>
+	';
+}
 /********************DISPLAY ERROR/SUCCESS MESSAGES TO FRONT PAGE END**************************/
 
 /********************DISPLAY IMAGES TO FRONT PAGE**************************/
@@ -81,11 +87,11 @@ catch(PDOException $err){
 //DISPLAY IMAGES
 foreach ($result as $img){
 
-	echo '<DIV class="index-img">
-			<A href="view.php?img='.$img['img_id'].'"><img src="'.$img['img_path'].'"></A>
-			</DIV>
-			<DIV class=page-num>';
+	echo '<DIV class="center img">
+			<A href="view.php?img='.$img['img_id'].'" alt="'.$img['img_path'].'"><img class="center" src="'.$img['img_path'].'"></A>
+			</DIV>';
 }
+	echo	'<DIV class="center page-num">';
 /********************DISPLAY IMAGES TO FRONT PAGE END**************************/
 
 /********************PAGINATION**************************/

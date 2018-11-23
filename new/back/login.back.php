@@ -5,7 +5,7 @@ include_once "connect.back.php";
 
 //VARIABLES
 
-$user_login		= $_POST['login'];
+$user_login		= htmlentities($_POST['login']);
 $user_pwd		= $_POST['pwd'];
 $submit			= $_POST['submit'];
 
