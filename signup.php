@@ -1,38 +1,32 @@
-<?php
-	include_once 'header.php';
-?>
-		<SECTION class="main-container">
-			<DIV class="main-wrapper">
-			<?PHP
-			$signup = $_GET['signup'];
-				if ($signup == "success")
-					echo "Signup Success. Please Login Above!";
-				else if ($signup == "pwdmismatch") {
-					echo "Signup Error. Passwords do not match!";
-				}
-				else if ($signup == "used_user") {
-					echo "Signup Error. Username exists!";
-				}
-				else if ($signup == "used_email") {
-					echo "Signup Error. E-mail exists!";
-				}
-				else if ($signup == "error_email") {
-					echo "Signup Error. E-mail invalid!";
-				}
-			?>
-				<H2>Signup</H2>
-				<FORM class="signup-form" action="includes/signup.inc.php" method="POST">
-					<INPUT type="text" name="first" placeholder="Firstname" required>
-					<INPUT type="text" name="last" placeholder="Lastname" required>
-					<INPUT type="text" name="uid" placeholder="Username" required>
-					<INPUT type="text" name="email" placeholder="E-Mail" required>
-					<INPUT type="password" name="pwd" placeholder="Password" required>
-					<INPUT type="password" name="repwd" placeholder="Confirm Password" required>
-					<BUTTON type="submit" name="submit" value="submit">Sign up</BUTTON>
-				</FORM>
-			</DIV>
-		</SECTION>
+<?PHP
+/*********************HEADER********************/
+include_once "header.php";
+/*********************END********************/
 
-<?php
-	include_once 'footer.php';
+/*********************BODY********************/
+
+?>
+<NAV>
+	<DIV>
+		<FORM action="back/signup.back.php" method="POST">
+			<INPUT type="text" name="first" placeholder="Firstname" required>
+			<INPUT type="text" name="last" placeholder="Lastname" required>
+			<INPUT type="text" name="uid" placeholder="Username" required>
+			<INPUT type="text" name="email" placeholder="E-mail" required>
+			<p>The password must be at least 6 characters long.<br />
+			It must contain 'Alphabet Characters' and 'Digits':</p>
+			<INPUT type="password" name="pwd" placeholder="Password" required>
+			<INPUT type="password" name="repwd" placeholder="Retype Password" required>
+			<BUTTON type="submit" name="submit" value="OK">Sign Up</BUTTON>
+		</FORM>
+	</DIV>
+</NAV>
+<?PHP
+/*********************END********************/
+
+
+/*********************FOOTER********************/
+include_once "footer.php";
+/*********************END********************/
+
 ?>

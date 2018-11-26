@@ -1,8 +1,9 @@
-<FOOTER>
-	<DIV class="foot-copyright">
-	</DIV>
-	<hr>
-	<p>Copyright © 2018 cterblan</p>
-</FOOTER>
+</DIV>
 </BODY>
-</HTML>
+<FOOTER>
+	<NAV class="nav-footer">
+		<DIV>
+			Copyright cterblan@student.wethinkcode.co.za
+		</DIV>
+	</NAV>
+</FOOTER>
