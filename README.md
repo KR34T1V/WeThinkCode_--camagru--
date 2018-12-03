@@ -7,7 +7,7 @@ The website allows users to manipulate images taken from the webcam or uploaded 
 Then post these images to be seen by the public. Users which have an account are further able to like,
 and comment on these images, Users are also able to delete images that they have posted.
 
-#FEATURES
+FEATURES
 E-mail Verification,
 Notifications,
 Image Uploads,
@@ -17,13 +17,13 @@ Viewing Other Posts,
 Upvoting Posts,
 Comment on Posts.
 
-#ACCOUNT CONTROL
+ACCOUNT CONTROL
 Change Username,
 Change E-Mail,
 Change Password,
 Toggle Notifications.
 
-#LOGIN
+LOGIN
 Forgot Password,
 Login With Username,
 Login With Email.
