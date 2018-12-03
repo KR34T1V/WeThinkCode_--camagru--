@@ -19,8 +19,8 @@ and comment on these images, Users are also able to delete images that they have
 
 ### ACCOUNT CONTROL
 ###### Change Username,
-###### ###### Change E-Mail,
-###### ###### ###### Change Password,
+###### Change E-Mail,
+###### Change Password,
 ###### Toggle Notifications.
 
 ### LOGIN
