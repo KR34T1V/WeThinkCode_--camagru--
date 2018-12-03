@@ -1,5 +1,5 @@
 # WeThinkCode_--camagru--
-#Camagru We Think Code_ Project
+## Camagru We Think Code_ Project
 
 Camagru is a project from the WeThinkCode_ curriculum.
 It is a basic web page to teach the use of HTML,PHP,CSS and JS.
@@ -8,22 +8,22 @@ Then post these images to be seen by the public. Users which have an account are
 and comment on these images, Users are also able to delete images that they have posted.
 
 ### FEATURE
-E-mail Verification,
-Notifications,
-Image Uploads,
-Webcam Image Snapping,
-Live Webcam Preview,
-Viewing Other Posts,
-Upvoting Posts,
-Comment on Posts.
+###### E-mail Verification,
+###### Notifications,
+###### Image Uploads,
+###### Webcam Image Snapping,
+###### Live Webcam Preview,
+###### Viewing Other Posts,
+###### Upvoting Posts,
+###### Comment on Posts.
 
 ### ACCOUNT CONTROL
-Change Username,
-Change E-Mail,
-Change Password,
-Toggle Notifications.
+###### Change Username,
+###### ###### Change E-Mail,
+###### ###### ###### Change Password,
+###### Toggle Notifications.
 
 ### LOGIN
-Forgot Password,
-Login With Username,
-Login With Email.
+###### Forgot Password,
+###### Login With Username,
+###### Login With Email.
